@@ -20,6 +20,21 @@
   )
 }
 
+#' Internal function for convert zenkaku to hankaku
+#'
+#' This function will be used with in functions of this package
+#' Not intended to call by package user.
+#' @import tibble
+
+.definition_kigou <- function(){
+  tribble(
+    ~to, ~from,
+    "~", "\uFF5E"
+  )
+}
+
+
+
 
 #' Internal function for applying str_replace_all to a single character.
 #'
@@ -61,12 +76,39 @@ str_replace_all_repeats <- function(character_vector, froms, tos){
 #' @import stringr
 #' @export
 
-zenkaku_to_hankaku_num <- function(character_vector){
-
-  froms <- .definition_numeric()$from
+conv_zenkaku_num <- function(character_vector){
 
   str_replace_all_repeats(character_vector = character_vector,
                           froms = .definition_numeric()$from,
                           tos   = .definition_numeric()$to )
-
 }
+
+#' Convert zenkaku special characters to hankaku number.
+#'
+#' This function convert zenkaku special characters to hankaku characters within string vector.
+#'
+#' @param character_vector A character vector include zenkaku number character.
+#' @import stringr
+#' @export
+
+
+conv_zenkaku_kigou <- function(character_vector){
+  str_replace_all_repeats(character_vector = character_vector,
+                          froms = .definition_kigou()$from,
+                          tos   = .definition_kigou()$to )
+}
+
+#' Convert zenkaku SPACE to hankaku SPACE.
+#'
+#' This function convert zenkaku SPACE to hankaku SPACE within string vector.
+#'
+#' @param character_vector A character vector include zenkaku number character.
+#' @import stringr
+#' @export
+
+conv_zenkaku_space <- function(character_vector){
+  str_replace_all(character_vector, pattern = "\u3000",replacement =  " ")
+}
+
+
+
