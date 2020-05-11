@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588900558803.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B22DED97",
+    "lastKnownWriteTime" : 1589166778,
+    "last_content_update" : 1589166778103,
+    "path" : "~/godexcelslayer/R/validate_input.R",
+    "project_path" : "R/validate_input.R",
+    "properties" : {
+        "cursorPosition" : "15,39",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
