@@ -58,7 +58,6 @@ str_replace_all_repeats <- function(character_vector, froms, tos){
 #'
 #' @param character_vector A character vector include zenkaku number character.
 #' @import stringr
-#' @import magrittr
 
 zenkaku_to_hankaku_num <- function(character_vector){
 
