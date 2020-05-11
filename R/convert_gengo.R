@@ -1,6 +1,7 @@
 #' Convert "Heisei" to Jurian years (Seireki).
 #'
 #' @param integer_vector Integer vector with minimum value 1.
+#' @export
 
 heisei_to_seireki <- function(integer_vector){
   .check(any(integer_vector <= 0), "Inputted integer vector contains value <= 0")

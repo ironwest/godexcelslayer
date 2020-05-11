@@ -44,6 +44,7 @@
 #' @param froms Vector containing argument for pattern in str_replace_all
 #' @param tos Vector containing argument for replace in str_replace_all
 #' @import purrr
+#' @export
 
 str_replace_all_repeats <- function(character_vector, froms, tos){
   map_chr(character_vector, ~{
@@ -58,6 +59,7 @@ str_replace_all_repeats <- function(character_vector, froms, tos){
 #'
 #' @param character_vector A character vector include zenkaku number character.
 #' @import stringr
+#' @export
 
 zenkaku_to_hankaku_num <- function(character_vector){
 
