@@ -5,7 +5,7 @@
 #' @import stringr
 #' @export
 
-remo_spaces <- function(character_vector, zenkaku = TRUE){
+remove_spaces <- function(character_vector, zenkaku = TRUE){
 
   if(zenkaku){
     character_vector <- conv_zenkaku_space(character_vector)
